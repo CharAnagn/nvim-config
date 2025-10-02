@@ -1,0 +1,6 @@
+plugin/packer_compiled.lua
+
+*.swp
+*.swo
+*.bak
+
