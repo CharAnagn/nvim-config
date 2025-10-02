@@ -1,4 +1,12 @@
 # 💤 LazyVim
 
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+## Setup on a new computer
+
+Clone this repository into your Neovim config directory:
+
+```bash
+git clone https://github.com/charAnagn/nvim-config.git ~/.config/nvim
+
+## Customizations
+
+- **Colorscheme** ->  Catppuccin Mocha
