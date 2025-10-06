@@ -11,3 +11,7 @@ git clone https://github.com/charAnagn/nvim-config.git ~/.config/nvim
 ## Customizations
 
 - **Colorscheme** ->  Catppuccin Mocha
+
+
+## Remaps
+- Center cursor on half page up/down or when searching
