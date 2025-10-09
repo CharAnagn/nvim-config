@@ -19,3 +19,16 @@ map("n", "<leader>h", ":nohlsearch<CR>", opts)
 
 -- Example: quick save
 map("n", "<leader>w", ":w<CR>", opts)
+
+-- Quick find and replace for current word or manual input
+vim.keymap.set(
+  "n",
+  "<leader>r",
+  [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]],
+  { desc = "Replace all occurrences in file" }
+)
+
+-- Project-wide search & replace using Telescope live grep
+vim.keymap.set("n", "<leader>R", function()
+  require("telescope").extensions.live_grep_args.live_grep_args()
+end, { desc = "Search text across project" })
