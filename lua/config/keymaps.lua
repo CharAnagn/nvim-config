@@ -14,11 +14,11 @@ map("n", "<C-u>", "<C-u>zz", opts)
 map("n", "n", "nzzzv", opts)
 map("n", "N", "Nzzzv", opts)
 
--- Example: clear search highlights
-map("n", "<leader>h", ":nohlsearch<CR>", opts)
+-- Clear search highlights (leader-nh to avoid conflicting with LazyVim's Hunks menu)
+map("n", "<leader>nh", ":nohlsearch<CR>", { noremap = true, silent = true, desc = "Clear search highlights" })
 
--- Example: quick save
-map("n", "<leader>w", ":w<CR>", opts)
+-- Quick save + format (autoformat triggers on save)
+map("n", "<leader>ww", ":w<CR>", { noremap = true, silent = true, desc = "Save and format" })
 
 -- Quick find and replace for current word or manual input
 vim.keymap.set(
@@ -28,7 +28,3 @@ vim.keymap.set(
   { desc = "Replace all occurrences in file" }
 )
 
--- Project-wide search & replace using Telescope live grep
-vim.keymap.set("n", "<leader>R", function()
-  require("telescope").extensions.live_grep_args.live_grep_args()
-end, { desc = "Search text across project" })
